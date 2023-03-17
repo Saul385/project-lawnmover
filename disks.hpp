@@ -94,12 +94,12 @@ public:
   // that the first disk at index 0 is light, the second disk at index 1
   // is dark, and so on for the entire row of disks.
   bool is_initialized() const {
-      for (size_t i = 0; i < total_count(); i++){     //check each position before function
-        if (i % 2 == 0){                              //check even position --> should be light
+      for (size_t i = 0; i < total_count(); i++){     //check each position
+        if (i % 2 == 0){         //check even if even pos are light
             if (_colors[i] == DISK_DARK) {
               return false;
             }
-        } else {                                      //check odd position --> should be dark
+        } else {       //check odd positions if dark
             if (_colors[i] == DISK_LIGHT) {
               return false;
             }
@@ -173,7 +173,6 @@ sorted_disks sort_alternate(const disk_state& before) {
 sorted_disks sort_lawnmower(const disk_state& before) {
   int numOfSwap = 0;
   disk_state state = before; // makes copies 
-
   
   for (size_t i = 0; i < (state.total_count() / 4); i++) {
     for (size_t j = 1; state.is_index(j); j++) {
