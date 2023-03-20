@@ -154,7 +154,7 @@ sorted_disks sort_alternate(const disk_state& before) {
   // end is total
   int end = state.total_count();
     // iterate
-  for (int i = 0; i < state.total_count() / 2; i++) {
+  for (size_t i = 0; i < state.total_count() / 2; i++) {
     for (int j = begin; state.is_index(j); j += 2) {
       if ((state.get(j - 1) == DISK_DARK) && (state.get(j) == DISK_LIGHT)) {
         state.swap(j - 1);
@@ -174,8 +174,8 @@ sorted_disks sort_lawnmower(const disk_state& before) {
   int swapped = 0;
   auto state = before; // makes copies 
   
-  for (int i = 0; i < (state.total_count() / 4); i++) {
-    for (int j = 1; state.is_index(j); j++) {
+  for (size_t i = 0; i < (state.total_count() / 4); i++) {
+    for (size_t j = 1; state.is_index(j); j++) {
       if ((state.get(j - 1) == DISK_DARK) && (state.get(j) == DISK_LIGHT)) {
         state.swap(j - 1);
         swapped++;
