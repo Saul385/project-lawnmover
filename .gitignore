@@ -1,4 +1,6 @@
 *.docx
 *.o
 *.out
+.DS_Store
+.vscode
 disks_test
