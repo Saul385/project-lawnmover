@@ -4,4 +4,4 @@ Summary: This project is an implementation of the Lawnmower Algorithm and Altern
 
 # Group Members
 
-Name : Saul Ruiz Saul385@csu.fullerton.edu
+Name : Saul Ruiz Email: Saul385@csu.fullerton.edu
